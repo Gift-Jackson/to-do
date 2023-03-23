@@ -100,6 +100,12 @@
             acctNum.select();
 
             document.execCommand("copy");
+
+            copyBtn.classList.add("active");
+
+            setTimeout(function(){
+                copyBtn.classList.remove("active");
+            }, 2500);
         });
     </script>
 
@@ -120,7 +126,7 @@
             width: 100%;
             border: 1px solid var(--neutral);
             border-radius: 10px;
-            overflow: hidden;
+            overflow: hiden;
             margin-bottom: 20px;
             margin-top: 5px;
         }
@@ -130,6 +136,35 @@
             font-size: 17px;
             background: var(--neutral);
             color: #fefefe;
+            position: relative;
+            border-radius: 5px;
+        }
+        #copybtn::before{
+            content: "Copied!";
+            position: absolute;
+            height: 40px;
+            width: 100%;
+            top: -50px;
+            right: 0;
+            background: var(--neutral);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+        }
+        #copybtn::after{
+            content: "";
+            position: absolute;
+            background: var(--neutral);
+            padding: 7px;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            display: none;
+        }
+        #copybtn.active::after,
+        #copybtn.active::before{
+            display: flex;
         }
         #copybtn:active{
             filter: brightness(120%);
