@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Me Coffee</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <!-- share buttons link -->
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=641ba621886bea00193ba728&product=inline-share-buttons&source=platform" async="async"></script>
+</head>
+<body>
+    <div class="container">
+            <header>
+                <div class="title">
+                    <h1>To-do list</h1>
+                </div>
+                <div class="toggle-box">
+                    <div class="toggle"></div>
+                </div>
+            </header>
+
+            <div class="content">
+                <h2>Buy me coffee</h2>
+                <div class="box-container">
+                    <label for="acct"><b>Account Number:</b></label>
+                    <div class="input">
+                    <input id="acct" value="2223744497">
+                    <button id="copybtn">copy <i class="fa fa-copy fa-beat"></i></button>
+                    </div>
+
+                    <p class="txt"><b>Bank name:</b> &nbsp;UBA</p>
+                    <p class="txt"><b>Account name:</b> &nbsp;Gift Uwem Jackson</p>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Thanks!</h2>
+                <p style="color: var(--text);">Garri go dey sure!!</p>
+            </div>
+
+            <div class="hori">
+                <button id="trigbtn">change theme</button>
+            </div>
+            <div class="bg-theme">
+                <div class="head">choose your favorite theme!</div>
+                <div class="wrapper">
+                    <div class="circle one"></div>
+                    <div class="circle two"></div>
+                    <div class="circle three"></div>
+                    <div class="circle four"></div>
+                </div>
+            </div>
+    
+            <!-- share btn -->
+            <div class="sharethis-inline-share-buttons"></div>
+    
+            <!-- menu list -->
+        <div class="overlay">
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">To-do list</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="review.html">Leave a review</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- script -->
+    <script src="main.js"></script>
+    <script src="menu.js"></script>
+    <script src="theme.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+2348137411338", // WhatsApp number
+                call_to_action: "Message us", // Call to action
+                position: "left", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+
+    <script>
+        const acctNum = document.querySelector("#acct");
+        const copyBtn = document.querySelector("#copybtn");
+
+        copyBtn.addEventListener("click", ()=>{
+            acctNum.select();
+
+            document.execCommand("copy");
+        });
+    </script>
+
+    <style>
+        .box-container{
+            text-align: left;
+            height: auto;
+            margin-top: 20px;
+        }
+        label{
+            padding-left: 3px;
+            color: var(--text);
+        }
+        .input{
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            width: 100%;
+            border: 1px solid var(--neutral);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+        #copybtn{
+            width: 30%;
+            border: none;
+            font-size: 17px;
+            background: var(--neutral);
+            color: #fefefe;
+        }
+        #copybtn:active{
+            filter: brightness(120%);
+            transform: scale(0.9);
+        }
+        #copybtn:hover{
+            filter: brightness(90%);
+        }
+        #acct{
+            width: 70%;
+            border: none;
+            background-color: transparent;
+            font-size: 17px;
+            color: var(--text);
+            padding-left: 15px;
+        }
+        .txt{
+            margin-bottom: 20px;
+            padding-left: 3px;
+            color: var(--text);
+        }
+    </style>
+</body>
+</html>

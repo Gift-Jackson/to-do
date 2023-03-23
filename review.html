@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <!-- share buttons link -->
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=641ba621886bea00193ba728&product=inline-share-buttons&source=platform" async="async"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title">
+                <h1>To-do list</h1>
+            </div>
+            <div class="toggle-box">
+                <div class="toggle"></div>
+            </div>
+        </header>
+
+        <div class="content">
+            <h2>Send Review</h2>
+            <form id="contactform" action="https://formsubmit.io/send/eab0ec84-4af3-4b0a-8e70-731cfff3cd0b" method="POST">
+                <div class="review-box">
+                    <input type="text" id="name" name="name" placeholder="your name...">
+                    <input type="email" id="email" name="email" placeholder="E-mail address...">
+                    <textarea id="message" name="message" placeholder="your experience..."></textarea>
+                    <button class="revbtn">Send</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="hori">
+            <button id="trigbtn">change theme</button>
+        </div>
+        <div class="bg-theme">
+            <div class="head">choose your favorite theme!</div>
+            <div class="wrapper">
+                <div class="circle one"></div>
+                <div class="circle two"></div>
+                <div class="circle three"></div>
+                <div class="circle four"></div>
+            </div>
+        </div>
+
+        <!-- share btn -->
+        <div class="sharethis-inline-share-buttons"></div>
+
+        <!-- menu list -->
+    <div class="overlay">
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">To-do list</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tip.html">buy me a coffee</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+    <!-- script -->
+    <script src="main.js"></script>
+    <script src="menu.js"></script>
+    <script src="theme.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+2348137411338", // WhatsApp number
+                call_to_action: "Message us", // Call to action
+                position: "left", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+</body>
+</html>

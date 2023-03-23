@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- share buttons link -->
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=641ba621886bea00193ba728&product=inline-share-buttons&source=platform" async="async"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title">
+                <h1>To-do list</h1>
+            </div>
+            <div class="toggle-box">
+                <div class="toggle"></div>
+            </div>
+        </header>
+
+        <!-- Input field -->
+        <div class="input-box">
+            <input type="text" placeholder="Add New Task..." id="input">
+            <button id="btn">Add <i class="fa fa-plus"></i></button>
+        </div>
+
+        <!-- Task field -->
+        <ul class="list-container">
+            
+        </ul>
+
+        <div class="bg-theme">
+            <div class="head">choose your favorite theme!</div>
+            <div class="wrapper">
+                <div class="circle one"></div>
+                <div class="circle two"></div>
+                <div class="circle three"></div>
+                <div class="circle four"></div>
+            </div>
+        </div>
+
+        <div class="hori">
+            <button id="trigbtn">change theme</button>
+        </div>
+
+        <!-- share btn -->
+        <div class="sharethis-inline-share-buttons"></div>
+    </div>
+
+
+    <!-- menu list -->
+    <div class="overlay">
+        <div class="menu">
+            <ul>
+                <li><a href="review.html">Leave a review</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tip.html">buy me a coffee</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="main.js"></script>
+    <script src="menu.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
