@@ -28,11 +28,15 @@
         <div class="content">
             <h2>Send Review</h2>
             <form id="contactform" action="https://formsubmit.io/send/eab0ec84-4af3-4b0a-8e70-731cfff3cd0b" method="POST">
+                <input name="_redirect" type="hidden" id="name" value="https://my-task-v1.netlify.app/review.html">
                 <div class="review-box">
                     <input type="text" id="name" name="name" placeholder="your name...">
                     <input type="email" id="email" name="email" placeholder="E-mail address...">
                     <textarea id="message" name="message" placeholder="your experience..."></textarea>
                     <button class="revbtn">Send</button>
+                    <div class="success">
+                        <h3>Message delivered successfully!</h3>
+                    </div>
                 </div>
             </form>
         </div>
@@ -86,6 +90,41 @@
             s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
             var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
         })();
+    </script>
+
+    <style>
+        .success{
+            height: 50px;
+            width: 100%;
+            margin-top: 30px;
+            background-color: rgb(18, 209, 104);
+            color: #fff;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .success h3{
+            font-size: 15px;
+            letter-spacing: 1px;
+            word-wrap: break-word;
+            word-spacing: 2px;
+        }
+        .success.active{
+            display: flex;
+        }
+    </style>
+    <script>
+        const revBtn = document.querySelector(".revbtn");
+        const success = document.querySelector(".success");
+
+        revBtn.addEventListener("click", ()=>{
+            success.classList.add("active");
+            setTimeout(function(){
+                success.classList.remove("active");
+            }, 2500);
+        });
     </script>
 </body>
 </html>
